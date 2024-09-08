@@ -1,0 +1,478 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ 
+
+
+.tp {
+    background-color: whitesmoke;
+    height: 50vh;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 4vw;
+    height: 9vh;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+
+    a,
+    i {
+        position: relative;
+    }
+
+    a:hover,
+    i:hover {
+        color: #e68387;
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        width: 0;
+        height: 3px;
+        /* Height of the underline */
+        background-color: #e68387;
+        /* Color of the underline */
+        transition: width 0.4s ease, left 0.4s ease;
+        /* Smooth transition effect */
+    }
+
+    /* Hover effect */
+    a:hover::after {
+        width: 100%;
+        /* Expands the line to the full width */
+        left: 0;
+        /* Starts the line expansion from the center */
+    }
+
+}
+
+.sidebar {
+    position: fixed;
+    height: 58rem;
+    width: 22vw;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background-color: rgba(251, 236, 237, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+
+    a {
+        padding: 3vh 0;
+    }
+
+    a,
+    i {
+        position: relative;
+    }
+
+    a:hover,
+    i:hover {
+        color: #e68387;
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        width: 0;
+        height: 3px;
+        /* Height of the underline */
+        background-color: #e68387;
+        /* Color of the underline */
+        transition: width 0.4s ease, left 0.4s ease;
+        /* Smooth transition effect */
+    }
+
+    /* Hover effect */
+    a:hover::after {
+        width: 100%;
+        /* Expands the line to the full width */
+        left: 0;
+        /* Starts the line expansion from the center */
+    }
+}
+
+.i1 {
+    font-size: 2rem;
+    line-height: 0;
+    align-self: flex-end;
+    display: none;
+}
+
+.i2 {
+    font-size: 2rem;
+    line-height: 0;
+    align-self: flex-end;
+    padding: 3vh 4vw;
+}
+
+header {
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+}
+
+.menu {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidemenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sidesocial {
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+.social {
+    a {
+        margin-left: 2vw;
+        display: inline-block;
+    }
+}
+
+.onlyclr {
+    height: 70vh;
+    background-color: #fbeced;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0 20vw 10vh 20vw;
+    background-color: rgb(255, 255, 255);
+}
+
+.content-img {
+    background-image: url(../IMAGES/img1.jpg);
+    min-width: 100%;
+    height: 70vh;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    margin-top: -55vh;
+}
+
+.main-content {
+    margin-top: 10vh;
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        padding-bottom: 5vh;
+        letter-spacing: 1rem;
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        padding-bottom: 5vh;
+        line-height: 5vh;
+    }
+}
+
+.lm-btn {
+    display: inline-block;
+    width: 40vh;
+    padding: 3vh 1.56vw;
+    border: 4px solid #e68387;
+    border-radius: 60px;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 0.26vw;
+    font-size: 1.87rem;
+}
+
+.lm-btn:hover {
+    color: white;
+    background-color: #e68387;
+}
+
+.trasprnt {
+    height: 40vh;
+    width: 100%;
+    background-color: transparent;
+}
+
+.content2 {
+    height: auto;
+    display: flex;
+    background-color: #fbeced;
+    width: 100%;
+    padding: 10vh 20vw;
+    align-items: center;
+}
+
+.container-crousel {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2.6vw;
+    width: 25vw;
+}
+
+.crousel {
+    position: relative;
+    width: 100%;
+    max-width: 39vw;
+    margin: 4.63vh 0;
+    /* Center the carousel */
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slider {
+    display: flex;
+    /* Align slides in a row */
+    transition: transform 0.5s ease-in-out;
+    /* Smooth transition */
+    position: relative;
+    /* Allows positioning of child elements */
+}
+
+.slide {
+    flex: 0 0 100%;
+    /* Each slide takes up 100% of the slider width */
+    min-width: 100%;
+    /* Ensures each slide takes full width */
+    height: 55vh;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.slidecnt {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vh 0.5vw;
+
+
+    h2 {
+        margin-top: 1.8vh;
+        font-weight: 100;
+    }
+}
+
+/* Carousel Button Container Styling */
+.sliderbtn {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Button Styling */
+.sliderbtn button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1vh 0.5vw;
+    transition: background 0.3s ease;
+}
+
+.sliderbtn button:hover {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20%;
+}
+
+/* Button Active State */
+.active {
+    transform: translateX(0);
+}
+
+.subcontent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding-left: 2.6vw;
+
+    h1 {
+        font-size: 5rem;
+        width: 100%;
+    }
+
+    p {
+        margin-top: 1.4vh;
+        width: 100%;
+        text-align: justify;
+        font-size: 1.5rem;
+        line-height: 3.7vh;
+    }
+}
+
+.lm-btn2 {
+    display: inline-block;
+    width: 40vh;
+    padding: 3vh 1.56vw;
+    text-align: center;
+    border: 4px solid #e68387;
+    border-radius: 60px;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    margin-top: 4.6vh;
+    letter-spacing: 0.26vw;
+    font-size: 1.87rem;
+}
+
+.lm-btn2:hover {
+    color: white;
+    background-color: #e68387;
+}
+
+.content3 {
+    height: auto;
+    min-height: 50vh;
+    background-color: hsl(0, 0%, 100%);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20vw;
+
+    h1 {
+        font-size: 5rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    p {
+        font-size: 1.9rem;
+        margin-top: 1.4vh;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+
+.onlyclr2 {
+    height: 38vh;
+    background-color: #fbeced;
+    width: 100%;
+}
+
+.card-category-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2.6vw;
+    height: auto;
+    margin-top: -27vh;
+}
+
+.card {
+    height: auto;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 2vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 10px 5px 5px rgb(224, 224, 224);
+    overflow: hidden;
+
+    h1 {
+        font-size: 2.4rem;
+    }
+    
+    p {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+
+.img-container {
+    height: 18vh;
+    width: 20vw;
+}
+
+.img-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.lastbtn {
+    height: 37vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lm-btn3 {
+    display: inline-block;
+    width: 40vh;
+    padding: 3vh 1.56vw;
+    border: 4px solid #e68387;
+    border-radius: 60px;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 0.26vw;
+    font-size: 1.87rem;
+    text-align: center;
+}
+
+.lm-btn3:hover {
+    color: white;
+    background-color: #e68387;
+}
